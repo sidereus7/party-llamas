@@ -14,22 +14,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // TODO: Pick the appropriate llama to show based on time
+
+        // TODO: Animate once at the start
     }
 
-    public void llamaAction(View view) {
-        YoYo.with(Techniques.Bounce)
-                .duration(500)
-                .repeat(3)
-                .playOn(view);
-
-        YoYo.with(Techniques.Swing)
-                .duration(500)
-                .repeat(3)
-                .playOn(view);
-
-        YoYo.with(Techniques.Shake)
-                .duration(500)
-                .repeat(3)
-                .playOn(view);
+    public void checkPartyStatus(View view) {
+        Intent intent = new Intent(this, DisplayLlamaActivity.class);
+        startActivity(intent);
     }
 }
