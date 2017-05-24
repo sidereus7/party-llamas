@@ -17,11 +17,13 @@
         android:textSize="48sp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/button"
+    <ImageView
+        android:id="@+id/imageButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Is it party time yet?"
-        android:onClick="checkPartyStatus"/>
+        android:layout_margin="40sp"
+        app:srcCompat="@android:drawable/screen_background_light_transparent"
+        android:background="@drawable/is_it_party_time"
+        android:onClick="checkPartyStatus" />
 
 </LinearLayout>
