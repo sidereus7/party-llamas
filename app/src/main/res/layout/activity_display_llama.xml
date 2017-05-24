@@ -21,10 +21,22 @@
         android:id="@+id/imageButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16sp"
+        android:layout_marginRight="16sp"
+        android:adjustViewBounds="true"
         app:srcCompat="@android:drawable/screen_background_light_transparent"
         android:background="@drawable/llama"
+        android:contentDescription="@string/party_llama_description"
         android:onClick="llamaAction" />
 
-    <!-- Add a breadcrumb back to MainActivity -->
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="20sp"
+        android:text="@string/return_to_main"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:onClick="returnToMain" />
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.sarajackson.apcs.partyllamas;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,5 +31,10 @@ public class DisplayLlamaActivity extends AppCompatActivity {
                 .duration(500)
                 .repeat(3)
                 .playOn(view);
+    }
+
+    public void returnToMain(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
