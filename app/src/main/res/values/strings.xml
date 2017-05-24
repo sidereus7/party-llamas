@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">PartyLlamas</string>
+    <string name="yes_party_llama">Yas!!!!</string>
+    <string name="no_party_llama">No.</string>
+    <string name="return_to_main"><u>Go back to waiting...</u></string>
+
+    <string name="sleepy_llama_description">A cute sleeping llama</string>
+    <string name="business_llama_description">A hipster business llama</string>
+    <string name="party_llama_description">An outrageous party llama</string>
 </resources>
