@@ -23,6 +23,7 @@ public class DisplayLlamaActivity extends AppCompatActivity {
     }
 
     public void llamaAction(View view) {
+        // TODO: Make behavior different for the 3 llamas
         YoYo.with(Techniques.Bounce)
                 .duration(500)
                 .repeat(3)

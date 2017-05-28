@@ -14,10 +14,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // TODO: Pick the appropriate llama to show based on time
-
-        // TODO: Animate once at the start
     }
 
     public void checkPartyStatus(View view) {
