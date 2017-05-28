@@ -24,6 +24,7 @@ public class DisplayLlamaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_llama);
 
         setResponseAndLlama();
+        llamaAction(findViewById(R.id.imageButton));
     }
 
     public void llamaAction(View view) {
