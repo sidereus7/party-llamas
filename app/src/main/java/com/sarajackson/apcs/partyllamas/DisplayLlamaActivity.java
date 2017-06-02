@@ -1,6 +1,7 @@
 package com.sarajackson.apcs.partyllamas;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,19 +18,21 @@ public class DisplayLlamaActivity extends AppCompatActivity {
     public static final String BUSINESS_LLAMA = "business";
     public static final String PARTY_LLAMA = "party";
 
+    private String llama;
+    private MediaPlayer music;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_llama);
 
+        llama = getCurrentLlama();
         setResponseAndLlama();
+        beginMusic();
         llamaAction(findViewById(R.id.imageButton));
     }
 
     public void llamaAction(View view) {
-        // TODO: Make behavior different for the 3 llamas
-
-        String llama = getCurrentLlama();
         if (llama.equals(SLEEPY_LLAMA)) {
             animateSleepyLlama(view);
         } else if (llama.equals(BUSINESS_LLAMA)) {
@@ -72,6 +75,7 @@ public class DisplayLlamaActivity extends AppCompatActivity {
 
     public void returnToMain(View view) {
         Intent intent = new Intent(this, MainActivity.class);
+        music.stop();
         startActivity(intent);
     }
 
@@ -89,8 +93,6 @@ public class DisplayLlamaActivity extends AppCompatActivity {
     private void setResponseAndLlama() {
         TextView partyResponse = (TextView) findViewById(R.id.party_response);
         ImageView llamaImage = (ImageView) findViewById(R.id.imageButton);
-
-        String llama = getCurrentLlama();
         if (llama.equals(SLEEPY_LLAMA)) {
             partyResponse.setText(R.string.no_party_llama);
             llamaImage.setBackgroundResource(R.drawable.sleepy_llama);
@@ -101,5 +103,18 @@ public class DisplayLlamaActivity extends AppCompatActivity {
             partyResponse.setText(R.string.yes_party_llama);
             llamaImage.setBackgroundResource(R.drawable.party_llama);
         }
+    }
+
+    private void beginMusic() {
+        if (llama.equals(SLEEPY_LLAMA)) {
+            music = MediaPlayer.create(this, R.raw.sleepy_loop);
+        } else if (llama.equals(BUSINESS_LLAMA)) {
+            music = MediaPlayer.create(this, R.raw.business_loop);
+        } else { // PARTY_LLAMA
+            music = MediaPlayer.create(this, R.raw.party_loop);
+        }
+
+        music.setLooping(true);
+        music.start();
     }
 }
