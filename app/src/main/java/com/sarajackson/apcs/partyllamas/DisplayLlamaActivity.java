@@ -6,10 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.daimajia.easing.linear.Linear;
 
 import java.util.*;
 
@@ -93,23 +95,27 @@ public class DisplayLlamaActivity extends AppCompatActivity {
     private void setResponseAndLlama() {
         TextView partyResponse = (TextView) findViewById(R.id.party_response);
         ImageView llamaImage = (ImageView) findViewById(R.id.imageButton);
+        LinearLayout layout = (LinearLayout) findViewById(R.id.llama_layout);
         if (llama.equals(SLEEPY_LLAMA)) {
             partyResponse.setText(R.string.no_party_llama);
 
-            String description = getResources().getString(R.string.sleepy_llama_description);
             llamaImage.setImageResource(R.drawable.sleepy_llama);
+            layout.setBackgroundResource(R.drawable.sleepy_background);
+            String description = getResources().getString(R.string.sleepy_llama_description);
             llamaImage.setContentDescription(description);
         } else if (llama.equals(BUSINESS_LLAMA)) {
             partyResponse.setText(R.string.no_party_llama);
 
-            String description = getResources().getString(R.string.business_llama_description);
             llamaImage.setImageResource(R.drawable.business_llama);
+            layout.setBackgroundResource(R.drawable.business_background);
+            String description = getResources().getString(R.string.business_llama_description);
             llamaImage.setContentDescription(description);
         } else { // PARTY_LLAMA
             partyResponse.setText(R.string.yes_party_llama);
 
-            String description = getResources().getString(R.string.party_llama_description);
             llamaImage.setImageResource(R.drawable.party_llama);
+            layout.setBackgroundResource(R.drawable.party_background);
+            String description = getResources().getString(R.string.party_llama_description);
             llamaImage.setContentDescription(description);
         }
     }
