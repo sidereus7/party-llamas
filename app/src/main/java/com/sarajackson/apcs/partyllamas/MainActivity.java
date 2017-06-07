@@ -27,4 +27,10 @@ public class MainActivity extends AppCompatActivity {
         music.stop();
         startActivity(intent);
     }
+
+    public void wiggleClock(View view) {
+        YoYo.with(Techniques.RubberBand)
+                .duration(400)
+                .playOn(view);
+    }
 }
