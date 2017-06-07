@@ -4,7 +4,8 @@
     <string name="no_party_llama">No.</string>
     <string name="return_to_main"><u>Go back to waiting...</u></string>
 
-    <string name="sleepy_llama_description">A cute sleeping llama</string>
-    <string name="business_llama_description">A hipster business llama</string>
-    <string name="party_llama_description">An outrageous party llama</string>
+    <string name="party_time_description">Is it party time yet?</string>
+    <string name="sleepy_llama_description">A cartoon sleeping llama wearing a nightcap</string>
+    <string name="business_llama_description">A cartoon llama wearing a tie, holding a briefcase in his mouth</string>
+    <string name="party_llama_description">An cartoon llama with a manic grin, wearing a party hat</string>
 </resources>

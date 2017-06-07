@@ -27,6 +27,7 @@
         android:layout_margin="40sp"
         android:background="?android:selectableItemBackground"
         android:src="@drawable/is_it_party_time"
+        android:contentDescription="@string/party_time_description"
         android:onClick="checkPartyStatus" />
 
 </LinearLayout>

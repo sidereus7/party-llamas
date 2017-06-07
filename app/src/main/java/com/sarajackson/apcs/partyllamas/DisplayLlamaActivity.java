@@ -95,13 +95,22 @@ public class DisplayLlamaActivity extends AppCompatActivity {
         ImageView llamaImage = (ImageView) findViewById(R.id.imageButton);
         if (llama.equals(SLEEPY_LLAMA)) {
             partyResponse.setText(R.string.no_party_llama);
+
+            String description = getResources().getString(R.string.sleepy_llama_description);
             llamaImage.setImageResource(R.drawable.sleepy_llama);
+            llamaImage.setContentDescription(description);
         } else if (llama.equals(BUSINESS_LLAMA)) {
             partyResponse.setText(R.string.no_party_llama);
+
+            String description = getResources().getString(R.string.business_llama_description);
             llamaImage.setImageResource(R.drawable.business_llama);
+            llamaImage.setContentDescription(description);
         } else { // PARTY_LLAMA
             partyResponse.setText(R.string.yes_party_llama);
+
+            String description = getResources().getString(R.string.party_llama_description);
             llamaImage.setImageResource(R.drawable.party_llama);
+            llamaImage.setContentDescription(description);
         }
     }
 
