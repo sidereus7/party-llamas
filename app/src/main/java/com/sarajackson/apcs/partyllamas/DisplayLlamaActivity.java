@@ -1,6 +1,7 @@
 package com.sarajackson.apcs.partyllamas;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -100,6 +101,8 @@ public class DisplayLlamaActivity extends AppCompatActivity {
             partyResponse.setText(R.string.no_party_llama);
 
             llamaImage.setImageResource(R.drawable.sleepy_llama);
+            Drawable background = getResources().getDrawable(R.drawable.sleepy_background);
+            background.setAlpha(225);
             layout.setBackgroundResource(R.drawable.sleepy_background);
             String description = getResources().getString(R.string.sleepy_llama_description);
             llamaImage.setContentDescription(description);
@@ -107,6 +110,8 @@ public class DisplayLlamaActivity extends AppCompatActivity {
             partyResponse.setText(R.string.no_party_llama);
 
             llamaImage.setImageResource(R.drawable.business_llama);
+            Drawable background = getResources().getDrawable(R.drawable.business_background);
+            background.setAlpha(225);
             layout.setBackgroundResource(R.drawable.business_background);
             String description = getResources().getString(R.string.business_llama_description);
             llamaImage.setContentDescription(description);
@@ -114,6 +119,8 @@ public class DisplayLlamaActivity extends AppCompatActivity {
             partyResponse.setText(R.string.yes_party_llama);
 
             llamaImage.setImageResource(R.drawable.party_llama);
+            Drawable background = getResources().getDrawable(R.drawable.party_background);
+            background.setAlpha(225);
             layout.setBackgroundResource(R.drawable.party_background);
             String description = getResources().getString(R.string.party_llama_description);
             llamaImage.setContentDescription(description);

@@ -15,7 +15,7 @@
         android:layout_margin="24sp"
         android:background="@android:color/transparent"
         android:format12Hour="hh:mm:ss a"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="48sp"
         android:textStyle="bold"
         android:onClick="wiggleClock" />
